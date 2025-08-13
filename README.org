@@ -29,3 +29,8 @@
 * [[https://openfoam.org/dev/coding-style-guide][OpenFOAM C++ Style Guide]]
 * [[https://bugs.openfoam.org][Reporting bugs in OpenFOAM]]
 * [[https://openfoam.org/contact][Contacting the OpenFOAM Foundation]]
+
+* ELAM
+Adds custom variables to selected solvers interFOAM, pimpleFoam, & simpleFOAM that
+computes accelration magnitude & components, strains, node number, and boudaries
+denoted by integer values to represent inlets and outlets.
