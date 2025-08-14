@@ -63,23 +63,23 @@ boundaryField
 {
     "(walls01|walls02)"
     {
-	      type		fixedValue;
-	      value		uniform 0;
+		type	fixedValue;
+		value	uniform 0;
     }
     inlet
     {
-        type    fixedValue;
-	    value	uniform 1;
+    	type	fixedValue;
+		value	uniform 1;
     }
     top
     {
-	    type		fixedValue;
-	    value		uniform 0;
+		type	fixedValue;
+		value	uniform 0;
     }
     outlet
     {
-    	type		fixedValue;
-    	value		uniform 2;
+    	type	fixedValue;
+    	value	uniform 2;
     }
 }
 
@@ -113,23 +113,23 @@ boundaryField
 {
     "(walls01|walls02)"
     {
-          type     fixedValue;
-	        value    uniform 0;
+		type	fixedValue;
+		value	uniform 0;
     }
     inlet
     {
-          type     fixedValue;
-	        value		 uniform 0;
+    	type	fixedValue;
+		value	uniform 0;
     }
     top01
     {
-          type     fixedValue;
-	        value    uniform 0;
+    	type	fixedValue;
+		value	uniform 0;
     }
     outlet
     {
-          type     fixedValue;
-	        value		 uniform 0;
+    	type	fixedValue;
+		value	uniform 0;
     }
 }
 
