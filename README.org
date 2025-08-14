@@ -33,7 +33,8 @@
 * ELAM
 Adds custom variables to selected solvers interFOAM, pimpleFoam, & simpleFOAM that
 computes accelration magnitude & components, strains, node number, and boudaries
-denoted by integer values to represent inlets and outlets.
+denoted by integer values to represent inlets and outlets. All variables outputs 
+computed automatically except NodeBC and WSC. Template files are included below.
 
 * NodeBC Variable Template
 #+BEGIN_SRC c++
