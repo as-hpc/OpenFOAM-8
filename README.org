@@ -34,3 +34,103 @@
 Adds custom variables to selected solvers interFOAM, pimpleFoam, & simpleFOAM that
 computes accelration magnitude & components, strains, node number, and boudaries
 denoted by integer values to represent inlets and outlets.
+
+* NodeBC Variable Template
+#+BEGIN_SRC c++
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      NodeBC;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform -3;
+
+boundaryField
+{
+    "(walls01|walls02)"
+    {
+	      type		fixedValue;
+	      value		uniform 0;
+    }
+    inlet
+    {
+        type    fixedValue;
+	      value		uniform 1;
+    }
+    top
+    {
+	      type		fixedValue;
+	      value		uniform 0;
+    }
+    outlet
+    {
+        type     fixedValue;
+        value    uniform 2;
+    }
+}
+
+// ************************************************************************* //
+#+END_SRC
+
+* WSC Variable Template
+#+BEGIN_SRC c++
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      WSC;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 0 0 0 0];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    "(walls01|walls02)"
+    {
+          type     fixedValue;
+	        value    uniform 0;
+    }
+    inlet
+    {
+          type     fixedValue;
+	        value		 uniform 0;
+    }
+    top01
+    {
+          type     fixedValue;
+	        value    uniform 0;
+    }
+    outlet
+    {
+          type     fixedValue;
+	        value		 uniform 0;
+    }
+}
+
+// ************************************************************************* //
+#+END_SRC
